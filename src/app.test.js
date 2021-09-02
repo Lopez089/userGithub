@@ -1,9 +1,10 @@
-import { render, screen } from '@testing-library/react'
-import App from './App'
+// import { render, screen } from '@testing-library/react'
 
-describe('App', () => {
-  test('renderiza una texto hola', () => {
-    render(<App />)
-    screen.getAllByText('hola')
-  })
-})
+// import App from './App'
+
+// describe('App', () => {
+//   test('renderiza una texto hola', () => {
+//     render(<App />)
+//     screen.getAllByText('hola')
+//   })
+// })
