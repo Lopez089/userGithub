@@ -22,14 +22,14 @@ jobs:
       #- name: test
       # run: npm run test
       - name: Bump version and push tag
-        run: echo "$GITHUB_CONTEXT"
+        #run: echo "$GITHUB_CONTEXT"
         if: ${{ github.event_name == 'pull_request' }}
         uses: anothrNick/github-tag-action@1.33.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: truncate
       - name: deploy site to vercel
-        run: echo "$GITHUB_CONTEXT"
+        #run: echo "$GITHUB_CONTEXT"
         if: ${{ github.event_name == 'pull_request' }}
         uses: amondnet/vercel-action@v20
         with:
