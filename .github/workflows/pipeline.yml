@@ -22,7 +22,7 @@ jobs:
       #- name: test
       # run: npm run test
       - name: ver eventos
-        run: echo "github.event_name"
+        run: echo "github"
       #- name: Bump version and push tag
       #  if: ${{ github.event_name == 'pull_request' }}
       #  uses: anothrNick/github-tag-action@1.33.0
