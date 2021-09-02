@@ -21,16 +21,14 @@ jobs:
         run: npm run eslint
       #- name: test
       # run: npm run test
-      - name: ver eventos
-        run: echo "$GITHUB_CONTEXT"
       - name: Bump version and push tag
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.33.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: truncate
       - name: deploy site to vercel
-        if: ${{ github.event_name == 'pull_request' }}
+        if: ${{ github.event_name == 'push' }}
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
