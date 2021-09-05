@@ -19,7 +19,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "eslint": "standard",
-    "eslint:fix": "standard --fix"
+    "eslint:fix": "standard --fix",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "browserslist": {
     "production": [
@@ -45,5 +47,24 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-testing-library": "^3.10.2",
     "standard": "^16.0.3"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json",
+    "env": {
+      "jest": true
+    }
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect",
+      "test",
+      "cy"
+    ]
   }
 }
