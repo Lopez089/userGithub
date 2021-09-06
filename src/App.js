@@ -1,19 +1,18 @@
+import { useState } from 'react'
 import { ContentInfoUser } from './components/ContentInfoUser'
 import { Search } from './components/search'
 import { Layout } from './components/layout'
-import { DataUser } from './components/dataUser'
-import { DetailUser } from './components/detailUser'
-import { DetailGithub } from './components/detailGithub'
+import { ToggleUser } from './components/ToggleUser'
 
 const App = () => {
+  const [user] = useState(false)
+
   return (
     <div>
       <Layout>
         <Search />
         <ContentInfoUser>
-          <DataUser />
-          <DetailGithub />
-          <DetailUser />
+          <ToggleUser user={user} />
         </ContentInfoUser>
       </Layout>
     </div>
