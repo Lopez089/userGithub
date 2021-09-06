@@ -1,4 +1,4 @@
-export const DetailUser = () => {
+export const DetailGithub = () => {
   return (
     <section>
       <div>
