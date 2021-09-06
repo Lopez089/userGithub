@@ -1,4 +1,4 @@
-export const dataUser = () => {
+export const DataUser = () => {
   return (
     <section>
       <div>
