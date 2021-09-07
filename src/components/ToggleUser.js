@@ -4,7 +4,7 @@ import { Profile } from './profile'
 export const ToggleUser = ({ user }) => {
   return (
     <>
-      {user ? <Profile /> : <NotProfile />}
+      {user ? <Profile user={user} /> : <NotProfile />}
     </>
   )
 }
