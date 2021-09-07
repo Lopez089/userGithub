@@ -4,7 +4,7 @@ export const themeDark = {
   primary_hover: '',
   secondary: '#0677FB',
   secondary_hover: '',
-  text_primary: '#fffff',
+  text_primary: '#fff',
   text_secondary: '',
   text_muted: ''
 
