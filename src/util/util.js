@@ -6,10 +6,13 @@ export const setInputChange = (e, setInputValue) => {
   setInputValue(e.target.value)
 }
 
-export const getUser = (setUser) => {
+const hasInputValue = (inputvalue) => inputvalue ? (uri + inputvalue) : (uri + userDefault)
+
+export const getUser = (setUser, inputvalue) => {
   const options = {
     headers: { Authorization: env.TOKEN_GITHUB }
   }
-  axios.get(uri + userDefault, options)
+
+  axios.get(hasInputValue(inputvalue), options)
     .then(response => setUser(response.data))
 }
