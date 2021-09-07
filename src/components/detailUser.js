@@ -1,23 +1,23 @@
 import { BiMap, BiLink, BiUserCircle, BiBuildings } from 'react-icons/bi'
 
-export const DetailUser = () => {
+export const DetailUser = ({ location, url, company, twitter }) => {
   return (
     <section>
       <div>
         <BiMap />
-        <p>ubicacion</p>
+        <p>{location}</p>
       </div>
       <div>
         <BiLink />
-        <p>url</p>
+        <p>{url}</p>
       </div>
       <div>
         <BiUserCircle />
-        <p>redes sociales</p>
+        <p>{`@${twitter}`}</p>
       </div>
       <div>
         <BiBuildings />
-        <p>empresa</p>
+        <p>{company}</p>
       </div>
     </section>
   )
