@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { setInputChange } from '../util/util'
-import { Button } from '../components/button'
+import { ButtonStyle } from '../components/button'
 import { BiSearchAlt } from 'react-icons/bi'
 
 export const Search = ({ handleSubmit }) => {
@@ -15,7 +15,7 @@ export const Search = ({ handleSubmit }) => {
           value={inputvalue}
           onChange={(e) => { setInputChange(e, setInputValue) }}
         />
-        <Button>Search</Button>
+        <ButtonStyle>Search</ButtonStyle>
         <BiSearchAlt />
       </form>
     </>
