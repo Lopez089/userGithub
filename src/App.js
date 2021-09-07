@@ -8,6 +8,12 @@ import { ToggleUser } from './components/ToggleUser'
 const App = () => {
   const [user, setUser] = useState(false)
 
+  const handleSubmit = (e, inputvalue) => {
+    e.preventDefault()
+    console.log(inputvalue)
+    getUser(setUser, inputvalue)
+  }
+
   useEffect(() => {
     getUser(setUser)
   }, [])
@@ -15,7 +21,7 @@ const App = () => {
   return (
     <div>
       <Layout>
-        <Search />
+        <Search handleSubmit={handleSubmit} />
         <ContentInfoUser>
           <ToggleUser user={user} />
         </ContentInfoUser>
