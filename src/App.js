@@ -1,11 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { getUser } from './util/util'
 import { ContentInfoUser } from './components/ContentInfoUser'
 import { Search } from './components/search'
 import { Layout } from './components/layout'
 import { ToggleUser } from './components/ToggleUser'
 
 const App = () => {
-  const [user] = useState(false)
+  const [user, setUser] = useState(false)
+
+  useEffect(() => {
+    getUser(setUser)
+  }, [])
 
   return (
     <div>
