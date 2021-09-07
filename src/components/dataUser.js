@@ -1,17 +1,17 @@
-export const DataUser = () => {
+export const DataUser = ({ avatar, name, login, bio, createdAt }) => {
   return (
     <section>
       <div>
-        <img src='' alt='' />
+        <img src={avatar} alt={`avatar to ${name}`} />
       </div>
       <div>
         <div>
-          <h2>The octocat</h2>
-          <p>@juan</p>
-          <p>lorem ipsum dolor sit</p>
+          <h2>{name}</h2>
+          <p>{`@${login}`}</p>
+          <p>{bio}</p>
         </div>
         <div>
-          <p>date</p>
+          <p>{createdAt}</p>
         </div>
       </div>
     </section>
