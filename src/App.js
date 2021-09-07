@@ -10,7 +10,6 @@ const App = () => {
 
   const handleSubmit = (e, inputvalue) => {
     e.preventDefault()
-    console.log(inputvalue)
     getUser(setUser, inputvalue)
   }
 
