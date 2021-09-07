@@ -1,16 +1,26 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { getUser } from './util/util'
 import { ContentInfoUser } from './components/ContentInfoUser'
 import { Search } from './components/search'
 import { Layout } from './components/layout'
 import { ToggleUser } from './components/ToggleUser'
 
 const App = () => {
-  const [user] = useState(false)
+  const [user, setUser] = useState(false)
+
+  const handleSubmit = (e, inputvalue) => {
+    e.preventDefault()
+    getUser(setUser, inputvalue)
+  }
+
+  useEffect(() => {
+    getUser(setUser)
+  }, [])
 
   return (
     <div>
       <Layout>
-        <Search />
+        <Search handleSubmit={handleSubmit} />
         <ContentInfoUser>
           <ToggleUser user={user} />
         </ContentInfoUser>

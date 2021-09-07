@@ -1,17 +1,17 @@
-export const DetailGithub = () => {
+export const DetailGithub = ({ repos, folowers, folowing }) => {
   return (
     <section>
       <div>
         <p>Repos</p>
-        <p>8</p>
+        <p>{repos}</p>
       </div>
       <div>
         <p>folowers</p>
-        <p>3938</p>
+        <p>{folowers}</p>
       </div>
       <div>
         <p>folowing</p>
-        <p>9</p>
+        <p>{folowing}</p>
       </div>
     </section>
   )
