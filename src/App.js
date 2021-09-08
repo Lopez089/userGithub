@@ -18,14 +18,13 @@ const App = () => {
   }, [])
 
   return (
-    <div>
-      <Layout>
-        <Search handleSubmit={handleSubmit} />
-        <ContentInfoUser>
-          <ToggleUser user={user} />
-        </ContentInfoUser>
-      </Layout>
-    </div>
+    <Layout>
+      <Search handleSubmit={handleSubmit} />
+      <ContentInfoUser>
+        <ToggleUser user={user} />
+      </ContentInfoUser>
+    </Layout>
+
   )
 }
 

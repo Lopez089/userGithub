@@ -1,5 +1,7 @@
+import { ButtonStyle } from '../styles/components'
+
 export const Button = ({ children }) => {
   return (
-    <button>{children}</button>
+    <ButtonStyle>{children}</ButtonStyle>
   )
 }

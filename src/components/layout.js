@@ -1,11 +1,16 @@
+import { ButtonModeDark } from './butonModeDark'
+import { Wapper, Card, CardHeader } from '../styles/components'
+
 export const Layout = ({ children }) => {
   return (
-    <main>
-      <section>
-        <h1>devfinder</h1>
-        <p>butonlive</p>
-      </section>
-      {children}
-    </main>
+    <Wapper>
+      <Card>
+        <CardHeader>
+          <h1>devfinder</h1>
+          <ButtonModeDark />
+        </CardHeader>
+        {children}
+      </Card>
+    </Wapper>
   )
 }
